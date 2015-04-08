@@ -43,7 +43,7 @@ Java Client Example
     return result;
 ~~~
 
-### JQUery Client Example
+### JQuery Client Example
 ~~~
 $(document).ready(function() {
     $.ajax({
