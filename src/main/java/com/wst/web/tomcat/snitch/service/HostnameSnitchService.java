@@ -43,19 +43,9 @@ public class HostnameSnitchService {
 
     String hostname = null;
     try {
-      // try InetAddress.LocalHost first;
-      // NOTE -- InetAddress.getLocalHost().getHostName() will not work in certain environments.
       hostname = InetAddress.getLocalHost().getHostName();
     } catch (UnknownHostException ex) {
       LOGGER.error("An erro roccured while trying to fetch the hostname.", ex);
-    }
-
-    // try environment properties.
-    if (StringUtils.isEmpty(hostname)) {
-      hostname = System.getenv("COMPUTERNAME");
-      if (StringUtils.isEmpty(hostname)) {
-        hostname = System.getenv("HOSTNAME");
-      }
     }
 
     return hostname;
