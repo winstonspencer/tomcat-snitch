@@ -8,15 +8,23 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The Class HostnameSnitchService.
+ */
 @Path("/hostname")
 public class HostnameSnitchService {
 
+  /** The logger. */
   private static Logger LOGGER = LoggerFactory.getLogger(HostnameSnitchService.class);
 
+  /**
+   * Gets the host name.
+   *
+   * @return the host name
+   */
   @GET
   @Produces({ "text/html", "application/json" })
   public Response getHostName() {
@@ -39,6 +47,11 @@ public class HostnameSnitchService {
     return response;
   }
 
+  /**
+   * Gets the hostname.
+   *
+   * @return the hostname
+   */
   private String getHostname() {
 
     String hostname = null;

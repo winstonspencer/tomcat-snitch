@@ -9,11 +9,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+/**
+ * The Class DefaultSnitchService.
+ */
 @Path("/")
 public class DefaultSnitchService {
 
+  /** The logger. */
   private static Logger LOGGER = LoggerFactory.getLogger(DefaultSnitchService.class);
 
+  /**
+   * Gets the detault message.
+   *
+   * @return the contect root detault message
+   */
   @GET
   @Produces({ "text/html", "application/json" })
   public Response getDetaultMessage() {
