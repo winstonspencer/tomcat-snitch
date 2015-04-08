@@ -17,12 +17,12 @@ Tomcat-Snitch will return the following:
 * Web Application (Up or Down)  **`http://<server>:<port>/tomcat-snitch/<web-applicaiton-name>`**
 
 ## Example
-To view the raw JSON response simple navigate to **'http://<server>:<port>/tomcat-snitch'**.  If you are using a plain vanilla tomcat instance simple navigate to **'http://localhost:8080/tomcat-snitch'**.  
+To view the raw JSON response simple navigate to **`http://<server>:<port>/tomcat-snitch`**.  If you are using a plain vanilla tomcat instance simple navigate to **`http://localhost:8080/tomcat-snitch`**.  
 
 ### Java Client Example
-The below example describes how the application can be called using a java client application.  Please note the example uses the **'spring-web'** RestTemplate object.
+The below example describes how the application can be called using a java client application.  Please note the example uses the **`spring-web`** RestTemplate object.
 
-**'spring-web'** POM dependency.
+**`spring-web`** POM dependency.
 ~~~
   <dependency>
   	<groupId>org.springframework</groupId>
