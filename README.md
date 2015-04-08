@@ -5,13 +5,13 @@ A RESTful API that provides information about the tomcat server it is deployed o
 Tomcat-Snitch will return the following:
 * OS Type
 * Server Status (Up or Down)
-* Free Memory
-* Used Memory
 * Server Name
 * IP Address
 * GEO Location
 * Up Time
 * Server Timestamp
+* Free Memory
+* Used Memory
 * Install Web Applications
 *  Web Applications (Up or Down)
 
@@ -41,4 +41,17 @@ Java Client Example
       logger.error("An error occured while executing the tomcat-snitch service.", ex);
     }
     return result;
+~~~
+
+### JQUery Client Example
+~~~
+$(document).ready(function() {
+    $.ajax({
+        url: "http://<server>:<port>/tomcat-snitch"
+    }).then(function(data) {
+       $('os-type').append(data.osType);
+       $('ip-address).append(data.ipAddress);
+       $('server-hostname).append(data.hostname);
+    });
+});
 ~~~
